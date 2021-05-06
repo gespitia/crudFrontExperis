@@ -1,0 +1,16 @@
+<div *ngIf="persona; else loading">
+  <mat-list role="list">
+    <mat-list-item role="listitem"><strong>Nombres:</strong> &nbsp;{{ persona.name }} </mat-list-item><mat-divider></mat-divider>
+    <mat-list-item role="listitem"><strong>Apellidos:</strong> &nbsp;{{ persona.surname }} </mat-list-item><mat-divider></mat-divider>
+    <mat-list-item role="listitem"><strong>Email:</strong> &nbsp;{{ persona.email }} </mat-list-item><mat-divider></mat-divider>
+    <mat-list-item role="listitem"><strong>Celular:</strong> &nbsp;{{ persona.phone }} </mat-list-item><mat-divider></mat-divider>
+    <mat-list-item role="listitem"><strong>Fecha de entrevista:</strong> &nbsp;{{ persona.date_of_interview }} </mat-list-item><mat-divider></mat-divider>
+    <mat-list-item role="listitem"><strong>Rating:</strong> &nbsp;{{ persona.rating }} </mat-list-item><mat-divider></mat-divider>
+  </mat-list>
+
+</div>
+
+<ng-template #loading>
+  <mat-spinner style="margin: auto; top:40%"></mat-spinner>
+  <h3 style="text-align: center;">Cargando...</h3>
+</ng-template>

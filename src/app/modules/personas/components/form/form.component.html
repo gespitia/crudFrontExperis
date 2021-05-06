@@ -1,0 +1,52 @@
+<h2 style="text-align: center;">Formulario de Persona</h2>
+<form autocomplete="off" [formGroup]="formulario" (ngSubmit)="onNoClick(true)">
+  <div style="text-align: center;">
+    <input type="hidden" formControlName="id">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombres</mat-label>
+      <input matInput formControlName="name">
+      <mat-icon matSuffix>badge</mat-icon>
+      <mat-hint>no mas de 50 caracteres</mat-hint>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>Apellidos</mat-label>
+      <input matInput formControlName="surname">
+      <mat-icon matSuffix>badge</mat-icon>
+      <mat-hint>no mas de 50 caracteres</mat-hint>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>Celular</mat-label>
+      <input matInput formControlName="phone">
+      <mat-icon matSuffix>fitness_center</mat-icon>
+      <mat-hint>numeros no superiores a 3 cifras</mat-hint>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>email</mat-label>
+      <input matInput formControlName="email">
+      <mat-icon matSuffix>straighten</mat-icon>
+      <mat-hint>numeros no superiores a 3 cifras</mat-hint>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>rating</mat-label>
+      <input matInput formControlName="rating">
+      <mat-icon matSuffix>female</mat-icon>
+      <mat-hint>Califique del 1 al 10</mat-hint>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>fecha_entrevista</mat-label>
+      <input matInput formControlName="date_of_interview">
+      <mat-icon matSuffix>event_available</mat-icon>
+      <mat-hint>fecha formato "aaaa-mm-dd"</mat-hint>
+    </mat-form-field>
+    &nbsp;
+    <br>
+    <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid">Aceptar</button>
+    &nbsp;
+    <button mat-raised-button (click)="onNoClick()" type="reset">Cancelar</button>
+  </div>
+</form>
